@@ -3,8 +3,10 @@ package com.sensorfields.horizon
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
-class Horizon<State, Event, Effect, Action> {
-
+class Horizon<State, Event, Effect, Action>(
+    private val combine: Combine<State, Event, Effect, Action>,
+    private val transform: Transform<Action, Event>
+) {
     fun dispatch(event: Event) {}
 
     fun states(): Flow<State> = flow {}

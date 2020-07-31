@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainGraph"
+    app:startDestination="@id/licenseListFragment">
+
+    <fragment
+        android:id="@+id/licenseListFragment"
+        android:name="com.sensorfields.horizon.android.license.list.LicenseListFragment"
+        tools:layout="@layout/license_list_fragment">
+
+        <action
+            android:id="@+id/licenseView"
+            app:destination="@id/licenseViewFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/licenseViewFragment"
+        android:name="com.sensorfields.horizon.android.license.view.LicenseViewFragment"
+        tools:layout="@layout/license_view_fragment">
+
+        <argument
+            android:name="license"
+            app:argType="com.sensorfields.horizon.android.domain.License" />
+
+    </fragment>
+
+</navigation>

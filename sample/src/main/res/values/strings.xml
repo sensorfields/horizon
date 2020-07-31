@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="application_name">Horizon sample</string>
+
+    <string name="up">Go back</string>
+
+    <string name="license_list_title">Licenses</string>
+
+</resources>
